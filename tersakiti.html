@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Alumni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <audio id="bgMusic" autoplay>
+        <source src="music/ssstik.io_1784371394539.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="loader">
+
+        <div class="slider">
+            <img id="slide" src="assets/img/1.jpeg" alt="Memories">
+        </div>
+
+        <h2>PORTAL ALUMNI</h2>
+
+        <p>Selamat Datang Di Memories</p>
+
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+
+    </div>
+
+<div id="website">
+
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="assets/img/smk.png" alt="Logo Sekolah">
+        </div>
+
+        <h1>SELAMAT DATANG</h1>
+
+        <div class="jurusan-logo">
+            <img src="assets/logo/aphpi1.png" alt="Logo Jurusan">
+            <img src="assets/logo/prl.jpg" alt="Logo Jurusan">
+            <img src="assets/logo/tgp1.jpg" alt="Logo Jurusan">
+        </div>
+
+    </header>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="content">
+
+    <h1>SMK NEGERI 7 KENDARI </h1>
+    <h1>  ANGKATAN 3 KELAS GABUNGAN </h1>
+
+</div>
+
+</section>
+
+<section class="hall-of-fame">
+
+    <div class="icon">
+        <img src="assets/img/smk.png" alt="">
+    </div>
+
+    <h1>ALUMNI SMK 7</h1>
+
+    <div class="alumni-grid">
+
+        <div class="card">
+            <img src="assets/img/V.jpeg" alt="V">
+            <h3>Vanessa Angel Stevanus</h3>
+            <p>(APHPI)</p>
+            <P>Agribisnis Pengolahan Hasil Perikanan</P>
+        </div>
+       
+        <div class="card">
+            <img src="assets/img/y.jpeg" alt="y">
+            <h3>Nur Yusup Wijaya</h3>
+            <p>(RPL)</p>
+            <p>Rekayasa Perangkat Lunak</p>
+        </div>
+
+       <div class="card">
+            <img src="assets/img/I.jpeg" alt="Foto Irwan Laijo">
+            <h3>Irwan Laijo</h3>
+            <p>(TGP)</p>
+            <p>Teknik Geologi Pertambangan</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/N.jpeg" alt="Foto Nani Angraeny">
+            <h3>Nani Angraeny</h3>
+            <p>(APHPI)</p>
+            <p>Agribisnis Pengolahan Hasil Perikanan</p>
+        </div>
+
+
+        <div class="card">
+            <img src="assets/img/win.jpeg" alt="Foto Muhammad Edwin Saputra">
+            <h3>Muhammad Edwin Saputra</h3>
+            <p>(RPL)</p>
+            <p>Rekayasa Perangkat Lunak</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/G.jpeg" alt="Foto Rizky Rahman">
+            <h3>Rizky Rahman</h3>
+            <p>(TGP)</p>
+            <p>Teknik Geologi Pertambangan</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/S.jpeg" alt="Foto Saswati">
+            <h3>Saswati</h3>
+            <p>(APHPI)</p>
+            <p>Agribisnis Pengolahan Hasil Perikanan</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/ju.jpeg" alt="">
+            <h3>Junior Grindra Wangsa</h3>
+            <p>(RPL)</p>
+            <p>Rekayasa Perangkat Lunak</p>
+        </div>
+
+         <div class="card">
+            <img src="assets/img/M.jpeg" alt="Foto Alumni TGP">
+            <h3>Alumni TGP</h3>
+            <p>(TGP)</p>
+            <p>Teknik Geologi Pertambangan</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/A.jpeg" alt="Foto Siti Aisyah Amini">
+            <h3>Siti Aisyah Amini</h3>
+            <p>(APHPI)</p>
+            <p>Agribisnis Pengolahan Hasil Perikanan</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="guru-jurusan">
+
+    <h2>Guru Jurusan</h2>
+
+    <div class="guru-list">
+
+        <div class="guru"
+            onclick="pilihGuru(
+            'assets/logo/prl.jpg',
+            'RPL',
+            'Rekayasa Perangkat Lunak',
+            'Kamal Abdul Khalik, S.Kom.')">
+
+            <img src="assets/img/Pak kamal.png" alt="Kamal Abdul Khalik">
+
+            <h4>Kamal Abdul Khalik, S.Kom</h4>
+
+        </div>
+
+        <div class="guru"
+            onclick="pilihGuru(
+            'assets/logo/aphpi.png',
+            'APHPI',
+            'Agribisnis Pengolahan Hasil Perikanan',
+            'Andi Besse Tendri, S.Pi.')">
+
+            <img src="assets/img/Bu Tendri.png" alt="Andi Besse Tendri">
+
+            <h4>Andi Besse Tendri, S.Pi</h4>
+
+        </div>
+
+        <div class="guru"
+            onclick="pilihGuru(
+            'assets/logo/tgp.png',
+            'TGP',
+            'Teknik Geologi Pertambangan',
+            'Muhamad Laode Imran, S')">
+
+            <img src="assets/img/Pak Imran.png" alt="Muhamad Laode Imran">
+
+            <h4>Muhamad Laode Imran, S</h4>
+
+        </div>
+
+    </div>
+
+    <div class="jurusan-detail">
+
+        <img id="logoJurusan"
+        src="assets/logo/aphpi.png" alt="Logo jurusan APHPI">
+
+        <h2 id="namaJurusan">APHPI</h2>
+
+        <p id="deskripsiJurusan">
+            Agribisnis Pengolahan Hasil Perikanan
+        </p>
+
+        <h4 id="guruJurusan">
+            Andi Besse Tendri, S.Pi
+        </h4>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <img src="assets/img/smk.png" class="footer-logo" alt="Logo SMK Negeri 7 Kendari">
+
+        <p class="footer-text">
+            Jadilah bagian dari komunitas SMK Negeri 7 Kendari.
+        </p>
+
+        <div class="footer-menu">
+            <a href="#">Beranda</a>
+            <p>❤️❤️❤️</p>
+            <a href="#">Galeri</a>
+        </div>
+
+        <div class="footer-social">
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Portal Alumni SMK Negeri 7 Kendari | All Rights Reserved
+    </div>
+
+</footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

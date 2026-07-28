@@ -1,0 +1,822 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+#loader{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#06294d;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+#website{
+
+    display:none;
+
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#0b3c61;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.slider{
+
+    width:420px;
+    height:280px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.4);
+
+}
+
+.slider img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:opacity .6s ease;
+
+}
+
+#loader h2{
+
+    color:white;
+    margin-top:25px;
+    font-size:38px;
+
+}
+
+#loader p{
+
+    color:white;
+    margin-top:10px;
+    margin-bottom:25px;
+
+    font-size:20px;
+
+}
+
+.loading-bar{
+
+    width:320px;
+    height:8px;
+
+    background:#ffffff40;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:#ffc107;
+
+    animation:loading 8s linear forwards;
+
+}
+
+@keyframes loading{
+
+    from{width:0%;}
+    to{width:100%;}
+
+}
+#loader h2{
+
+    color:white;
+    font-size:40px;
+    margin-top:20px;
+
+}
+
+#loader p{
+
+    color:white;
+    margin-top:10px;
+
+}
+
+.navbar{
+    width:80%;
+    height:90px;
+
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    background:#fff;
+    border-radius:0 0 25px 25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    z-index:100;
+}
+
+.logo img{
+    width:65px;
+}
+
+.navbar h1{
+    flex:1;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#000;
+}
+
+.jurusan-logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+/* HERO */
+
+.hero{
+
+    width:100%;
+    height:100vh;
+
+    background:url("assets/img/yuy.jpg") center center;
+    background-size:cover;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background:rgba(15,28,80,.55);
+
+}
+
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    text-align:center;
+}
+
+.content h2{
+
+    font-size:28px;
+    margin-bottom:8px;
+
+}
+
+.content h1{
+
+    font-size:55px;
+    color:#f8c328;
+    margin-bottom:25px;
+
+}
+
+.content p{
+
+    width:650px;
+    line-height:30px;
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+.hall-of-fame{
+    width:100%;
+    padding:70px 0;
+    background:#e0f0f4;
+    text-align:center;
+}
+
+.hall-of-fame .icon img{
+    width:90px;
+    margin-bottom:20px;
+}
+
+.hall-of-fame h1{
+    font-size:46px;
+    font-weight:700;
+    margin-bottom:60px;
+    color:#000000;
+}
+
+.alumni-grid{
+    width:80%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.card img{
+    width:var(--foto);
+    height:var(--foto);
+    border-radius:50%;
+    object-fit:cover;
+
+    position:relative;
+    top: -24px;
+    z-index:2;
+
+    border:5px solid #fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    transition:opacity 0.6s ease, transform 0.3s ease;
+}
+
+.card img.fade-transition{
+    opacity:0;
+}
+
+.card{
+    --foto:180px;
+    position:relative;
+    text-align:center;
+    padding:20px;
+}
+
+.card::before{
+
+    content:"";
+    position:absolute;
+
+    left:50%;
+    top:-18px;
+
+    transform:translateX(-50%);
+
+    width:calc(var(--foto) + 16px);
+    height:calc(var(--foto) + 16px);
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        45deg,
+        #ff0000,
+        #144abd,
+        #09a4bc,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #ff0000
+    );
+
+    background-size:400%;
+    animation:rgbBorder 8s linear infinite;
+
+    filter:blur(8px);
+
+    z-index:1;
+}
+@keyframes rgbBorder{
+
+    0%{
+        background-position:0 0;
+    }
+
+    50%{
+        background-position:300% 0;
+    }
+
+    100%{
+        background-position:0 0;
+    }
+
+}
+
+.guru-jurusan{
+    padding:70px 20px;
+    background:#fff;
+    text-align:center;
+}
+
+.guru-list{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.guru{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.guru:hover{
+    transform:translateY(-10px);
+}
+
+.guru img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.jurusan-detail img{
+    width:170px;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.jurusan-detail h2{
+    margin-bottom:10px;
+}
+
+.jurusan-detail p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.footer{
+    background:#0b4d72;
+    color:#fff;
+    text-align:center;
+    margin-top:80px;
+}
+
+.footer-content{
+    padding:70px 20px 50px;
+}
+
+.footer-logo{
+    width:110px;
+    margin-bottom:25px;
+}
+
+.footer-text{
+    width:600px;
+    max-width:90%;
+    margin:0 auto 40px;
+    line-height:30px;
+    font-size:18px;
+}
+
+.footer-menu{
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    flex-wrap:wrap;
+    margin-bottom:45px;
+}
+
+.footer-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+.footer-menu a:hover{
+    color:#ffc107;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.footer-social a{
+    width:50px;
+    height:50px;
+    border:2px solid rgba(255,255,255,.3);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#ffc107;
+    color:#000;
+    border-color:#ffc107;
+}
+
+.copyright{
+    padding:20px;
+    background:#083a56;
+    font-size:16px;
+}
+
+.music-player{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:99999;
+}
+
+#playBtn{
+    background:#ffc107;
+    color:#000;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:992px){
+
+.navbar{
+    width:95%;
+    padding:15px 20px;
+}
+
+.navbar h1{
+    font-size:20px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.hero{
+    height:90vh;
+}
+
+.content{
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    text-align:center;
+}
+
+.content h1{
+    font-size:42px;
+}
+
+.content h2{
+    font-size:26px;
+}
+
+.content p{
+    width:100%;
+    font-size:20px;
+}
+
+.badge{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.badge img{
+    width:70px;
+}
+
+.gallery{
+    width:90%;
+    grid-template-columns:repeat(2,1fr);
+}
+
+.gallery img{
+    width:100%;
+    height:160px;
+}
+
+.alumni-grid{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+    justify-items:center;
+}
+
+.card{
+    width:100%;
+    max-width:280px;
+    padding:24px 20px 20px;
+    background:#ffffff;
+    border-radius:28px;
+    box-shadow:0 18px 45px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.card h3{
+    margin:18px 0 8px;
+    font-size:1.08rem;
+    line-height:1.35;
+}
+
+.card p{
+    margin:6px 0;
+    color:#555;
+    font-size:0.95rem;
+    line-height:1.5;
+}
+
+.card img{
+    width:150px;
+    height:150px;
+    margin-top:-20px;
+}
+
+.footer-menu{
+    gap:20px;
+}
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+.navbar{
+    width:100%;
+    border-radius:0;
+    padding:12px 15px;
+}
+
+.navbar h1{
+    font-size:16px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.lang{
+    font-size:14px;
+}
+
+.hero{
+    height:100vh;
+}
+
+.content{
+    width:95%;
+}
+
+.content h2{
+    font-size:20px;
+}
+
+.content h1{
+    font-size:30px;
+}
+
+.content p{
+    font-size:18px;
+}
+
+.badge{
+    gap:15px;
+}
+
+.badge img{
+    width:55px;
+}
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+    width:95%;
+    gap:10px;
+}
+
+.gallery img{
+    height:120px;
+}
+
+.hall-of-fame h1{
+    font-size:28px;
+}
+
+.alumni-grid{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    width:170px;
+    height:170px;
+}
+
+.footer-logo{
+    width:80px;
+}
+
+.footer-text{
+    width:90%;
+    font-size:15px;
+}
+
+.footer-menu{
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-social{
+    gap:15px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+}
+}
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width:480px){
+
+.content h1{
+    font-size:24px;
+}
+
+.content h2{
+    font-size:18px;
+}
+
+.content p{
+    font-size:15px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.gallery img{
+    height:180px;
+}
+
+.card img{
+    width:140px;
+    height:140px;
+}
+
+.card h3{
+    font-size:18px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+.footer-social{
+    flex-wrap:wrap;
+}
+}
+
+@media(max-width:768px){
+
+.slider{
+
+    width:90%;
+    height:230px;
+
+}
+
+#loader h2{
+
+    font-size:28px;
+
+}
+
+#loader p{
+
+    font-size:16px;
+
+}
+
+.loading-bar{
+
+    width:80%;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.navbar{
+    width:100%;
+    border-radius:0;
+    padding:10px 15px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.jurusan-logo img{
+    width:40px;
+    height:40px;
+}
+
+.navbar h1{
+    font-size:18px;
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+@media (max-width:480px){
+
+.card{
+    --foto:120px;
+}
+
+.card img{
+    top:-23px;
+}
+
+.card::before{
+    top:-15px;
+    filter:blur(5px);
+}
+
+}
+
+@media (max-width:768px){
+
+.card{
+    --foto:140px;
+}
+
+.card img{
+    top:-23px;
+}
+
+.card::before{
+    top:-15px;
+    filter:blur(6px);
+}
+
+}
